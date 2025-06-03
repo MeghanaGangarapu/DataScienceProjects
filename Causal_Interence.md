@@ -17,9 +17,8 @@ To identify true causal relationships, we need rigorous methods like randomized 
 - `Ice cream sales vs. drowning`
 - `Cheese consumption vs. bedsheet entanglement deaths`
 
----
-
 > These relationships are **spurious** — driven by hidden or confounding variables.
+---
 
 ### 3. Key Terminology
 | Term          | Definition                                       | Example                      |
@@ -34,7 +33,6 @@ To identify true causal relationships, we need rigorous methods like randomized 
 ## Designing a Causal Experiment: Online A/B Testing
 Randomized controlled experiments are the gold standard for measuring causal effects in a product or marketing setting.
 
-### ✅ Checklist:
 #### Key Design Elements
 - Randomization Unit: Usually a user or session.
 - Target Population: Define user segments (e.g., by geography or device).
@@ -48,7 +46,7 @@ Randomized controlled experiments are the gold standard for measuring causal eff
 - Segment Analysis: Look for subgroup-specific effects.
  ---
 
-# Interpreting Results
+## Interpreting Results
 
 ## Statistical Significance
 - Indicates the likelihood that the observed effect is not due to chance.
@@ -87,19 +85,19 @@ Low lift: Evaluate implementation cost vs. potential gain.
 - **Primacy Effect**: Users take time to adopt
 - **Simpson’s Paradox**: Segments may contradict aggregate
 
-    Use time plots to detect novelty/primacy effects.
+    > Use time plots to detect novelty/primacy effects.
 
 
 ## Guardrails & Tradeoffs
 - **Guardrail metrics** : Shouldn’t change (e.g., error rate, revenue per user)
 - **Tradeoff: Engagement** ↑ but revenue ↓? → Do a cost-benefit analysis.
 
-    Launch only if expected gain > implementation and maintenance cost.
+    > Launch only if expected gain > implementation and maintenance cost.
 
 # Optional Tools:
-Bayesian A/B Testing
-Uplift Modeling
-Sequential Testing
+- Bayesian A/B Testing
+- Uplift Modeling
+- Sequential Testing
 
 ## Beyond A/B: Observational Causal Inference
 When RCTs (randomized controlled trials) aren't feasible (e.g., for pricing changes or geographic rollouts), use these methods:
@@ -110,9 +108,9 @@ When RCTs (randomized controlled trials) aren't feasible (e.g., for pricing chan
 - Causal Forests / Double Machine Learning
 
 # Case Study: Creative Effectiveness A/B Test
-**Goal**: Compare performance of two TV ads on engagement
-**Unit**: Two demographically similar markets
-**Metrics**: Site visits, search volume, conversions
+- **Goal**: Compare performance of two TV ads on engagement
+- **Unit**: Two demographically similar markets
+- **Metrics**: Site visits, search volume, conversions
 
 ```
 Market A: 1M impressions, 10k visits → 10/1000
@@ -128,9 +126,9 @@ Though it avoids geographic bias, household-level assignment introduces other va
     hannel preference bias
 
 # Summary
-Causal inference guides action, not just observation
-A/B tests reveal real effects, not random noise
-Statistical ≠ Practical Significance
-Confidence intervals provide nuance
-Run experiments mindfully and interpret results critically
+- Causal inference guides action, not just observation
+- A/B tests reveal real effects, not random noise
+- Statistical ≠ Practical Significance
+- Confidence intervals provide nuance
+- Run experiments mindfully and interpret results critically
 
