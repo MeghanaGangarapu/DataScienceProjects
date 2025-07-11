@@ -2,11 +2,14 @@ import streamlit as st
 import joblib
 import pandas as pd
 import numpy as np
+import os
 
 # --- Load model and metadata ---
+model_path = os.path.join(os.getcwd(), 'model', 'model_bundle.joblib')
 @st.cache_resource
 def load_model_bundle():
-    return joblib.load('/Users/kirant/PythonProjects/DataScienceProjects/Churn_Analysis/model/model_bundle.joblib')
+    return joblib.load(model_path)
+                    
 
 bundle = load_model_bundle()
 model = bundle['model']
