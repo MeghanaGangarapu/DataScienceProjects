@@ -6,3 +6,5 @@ seaborn
 xgboost
 lightgbm
 imblearn
+optuna
+joblib
